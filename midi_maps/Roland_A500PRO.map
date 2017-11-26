@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArdourMIDIBindings version="1.0.0" name="Roland A-300PRO / A-500PRO / A-800PRO">
+
+<!-- Works with device's factory settings, on control map 0. -->
+<!-- You must connect to "A-PRO MIDI 3" output -->
+
+  <DeviceInfo bank-size="8"/>
+
+<!-- Gain controls. Faders are mapped to faders. -->
+  <Binding channel="1" ctl="73" uri="/route/gain B1"/>
+  <Binding channel="1" ctl="75" uri="/route/gain B2"/>
+  <Binding channel="1" ctl="72" uri="/route/gain B3"/>
+  <Binding channel="1" ctl="91" uri="/route/gain B4"/>
+  <Binding channel="1" ctl="92" uri="/route/gain B5"/>
+  <Binding channel="1" ctl="93" uri="/route/gain B6"/>
+  <Binding channel="1" ctl="94" uri="/route/gain B7"/>
+  <Binding channel="1" ctl="95" uri="/route/gain B8"/>
+  <Binding channel="1" ctl="07" uri="/bus/gain master"/>
+
+<!-- Pan controls. -->
+  <Binding channel="1" ctl="74" uri="/route/pandirection B1"/>
+  <Binding channel="1" ctl="71" uri="/route/pandirection B2"/>
+  <Binding channel="1" ctl="65" uri="/route/pandirection B3"/>
+  <Binding channel="1" ctl="02"  uri="/route/pandirection B4"/>
+  <Binding channel="1" ctl="05"  uri="/route/pandirection B5"/>
+  <Binding channel="1" ctl="76" uri="/route/pandirection B6"/>
+  <Binding channel="1" ctl="77" uri="/route/pandirection B7"/>
+  <Binding channel="1" ctl="70" uri="/route/pandirection B8"/>
+
+<!-- Pan width. Right rotary is mapped to the pan width of the selected track -->
+  <Binding channel="1" ctl="10" uri="/route/panwidth S1"/>
+
+<!-- Switches -->
+
+
+  <Binding channel="1" ctl="21" function="transport-start"/>
+  <Binding channel="1" ctl="22" action="Transport/Rewind"/>
+  <Binding channel="1" ctl="23" action="Transport/Forward"/>
+  <Binding channel="1" ctl="24" function="transport-end"/>
+  <Binding channel="1" ctl="25" function="transport-stop"/>
+  <Binding channel="1" ctl="26" function="transport-roll"/>
+  <Binding channel="1" ctl="27" function="loop-toggle"/>
+  <Binding channel="1" ctl="28" function="rec-enable"/>
+  <Binding channel="1" ctl="28" function="rec-disable"/>
+
+<!-- "Sound" and "Multi" buttons are mapped to show editor or mixer. -->
+
+  <Binding channel="1" ctl="80" action="Common/show-editor"/>
+  <Binding channel="1" ctl="80" action="Common/show-mixer"/>
+<!-- Loop switch. 
+
+  <Binding msg="b0 37 7f" action="Transport/Loop"/>
+  <Binding msg="b0 37 00" action="Transport/Loop"/>
+-->
+</ArdourMIDIBindings>
